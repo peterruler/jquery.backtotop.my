@@ -1,0 +1,27 @@
+{
+  "name": "jquery.backtotop",
+  "title": "jQuery Backtotop",
+  "description": "JQuery animated back to top scroll icon",
+  "version": "0.1.0",
+  "homepage": "http://www.keepitnative.ch",
+  "author": {
+    "name": "Peter Ruler",
+    "email": "7starch@gmail.com",
+    "url": "http://www.keepitnative.ch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Arbeit/jquery.backtotop.my.git"
+  },
+  "bugs": "",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.keepitnative.ch/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "1.11.0"
+  },
+  "keywords": []
+}

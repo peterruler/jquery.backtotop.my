@@ -1,0 +1,53 @@
+// CSS3 PROPERTIES
+// --------------------------------------------------
+
+// Single side border-radius
+.border-top-radius(@radius) {
+  border-top-right-radius: @radius;
+  border-top-left-radius: @radius;
+}
+.border-right-radius(@radius) {
+  border-bottom-right-radius: @radius;
+  border-top-right-radius: @radius;
+}
+.border-bottom-radius(@radius) {
+  border-bottom-right-radius: @radius;
+  border-bottom-left-radius: @radius;
+}
+.border-left-radius(@radius) {
+  border-bottom-left-radius: @radius;
+  border-top-left-radius: @radius;
+}
+
+// Opacity
+.opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+.fadeIn() {
+  @-webkit-keyframes some-animation {.fadeIn;}
+  @-moz-keyframes some-animation {.fadeIn;}
+  @-ms-keyframes some-animation {.fadeIn;}
+  @-o-keyframes some-animation {.fadeIn;}
+  @keyframes some-animation {.fadeIn;}
+}
+
+.fadeInAnimation () {
+  from {.opacity(0);}
+  to {.opacity(1);}
+}
+.fadeOut() {
+  @-webkit-keyframes some-animation {.fadeOut;}
+  @-moz-keyframes some-animation {.fadeOut;}
+  @-ms-keyframes some-animation {.fadeOut;}
+  @-o-keyframes some-animation {.fadeOut;}
+  @keyframes some-animation {.fadeOut;}
+}
+
+.fadeOutAnimation () {
+  from {.opacity(1);}
+  to {.opacity(0);}
+}
