@@ -19,11 +19,12 @@
       notStrictEqual(actual, expected, [message])
       throws(block, [expected], [message])
   */
-
+    var scrolled = null;
   module('jQuery#jquery_backtotop', {
     // This will run before each test in this module.
     setup: function() {
       this.elems = $('#qunit-fixture').children();
+
     }
   });
 
@@ -60,8 +61,36 @@
        var act = $(window).scrollTop;
        QUnit.push(true, act, 0, "Page scrolls back to top");
     });
-    test("scrolled position equals top() position", function() {
-       $('body').css('top', "1200px");
-       equal($('body').css('top'),"auto", "$('body').css('top') equals auto");
+
+    $.fn.scroll2 = function (elm) {
+        /*
+        helper method to be called from triggering click event on "up Button"
+         */
+        var interv = Math.floor((600 / 1200) * $(window).scrollTop());
+       //scroll to position 10000
+       elm.scrollTop( 10000 );
+        //back to 0 - offset top
+       elm.animate(
+            {
+                scrollTop: this.offset().top()
+            },
+            interv,
+            "linear"
+        );
+    };
+
+    test("onclick scroll to top", function() {
+        //select iframes' body
+        var elm = $("iframe").contents().find("body");
+        //add a button to the iframe
+        var upBtn = '<a id="upBtn" class="glyphicon glyphicon-arrow-up" onclick="$.fn.scroll2(elm);" href="javascript:;"></a>';
+        $('iframe').find("body").append(upBtn);
+        //simulate button clicking
+        $('iframe').contents().find("#upBtn").trigger("click");
+        //get body's offset, should equal 0
+        scrolled = elm.scrollTop;
+        QUnit.push(true, scrolled, "0", "Page scrolls back to top");
+
     });
+    //@todo test fadeIn, fadeOut of buttons
 }(jQuery));

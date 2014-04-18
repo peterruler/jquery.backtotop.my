@@ -69,8 +69,7 @@
     };
     $.fn.scroll = function () {
         var interv = Math.floor((that.o.timeout / 1200) * $(window).scrollTop());
-        (that.o.DEBUG) ? log("delay", interv) : void(0);
-
+        //(that.o.DEBUG) ? log("delay", interv) : void(0);
         $("html, body").animate(
             {
                 scrollTop: 0
@@ -83,7 +82,7 @@
         e.preventDefault();
     });
     $(window).on('scroll', function () {
-        (that.o.DEBUG) ? log("document.body.scrollTop", document.body.scrollTop) : void(0);
+        //(that.o.DEBUG) ? log("document.body.scrollTop", document.body.scrollTop) : void(0);
         if (document.body.scrollTop > window.innerHeight) {
             Plugin.prototype.getInstance();
         } else {
@@ -99,7 +98,7 @@
         });
     };
 
-    var log = function (msg, txt) {
+  /*  var log = function (msg, txt) {
         var logcount = $.data(that, "logcount");
         var separator = "";
         for (var n = 0; n < logcount; n++) {
@@ -108,5 +107,5 @@
         window.console.log(separator + " " + logcount + ". " + msg + " =" + txt);
         logcount++;
         $.data(that, "logcount", logcount);
-    };
+    };*/
 })(jQuery, window, document);

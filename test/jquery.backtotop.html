@@ -7,6 +7,21 @@
   <script src="../libs/jquery-loader.js"></script>
   <!-- Load local QUnit. -->
   <link rel="stylesheet" href="../libs/qunit/qunit.css" media="screen">
+    <style>
+        #qunit-fixture {
+            position: absolute;
+             top: 600px;
+             left: 0;
+            width: 1000px;
+            height: 1000px;
+        }
+        iframe {
+            border:2px;
+            background:#f00;
+            height:500px;
+            width:1000px;
+        }
+    </style>
   <script src="../libs/qunit/qunit.js"></script>
   <!-- Load local lib and tests. -->
   <script src="../src/jquery.backtotop.js"></script>
@@ -23,6 +38,9 @@
     <span>lame test markup</span>
     <span>normal test markup</span>
     <span>awesome test markup</span>
+      <iframe id="ScrollTest" height="1200" width="2000" src="fixtures/iframe/iframe.html" frameborder="1">
+
+      </iframe>
   </div>
 </body>
 </html>

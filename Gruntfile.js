@@ -55,7 +55,7 @@ module.exports = function(grunt) {
         }
     },
     qunit: {
-      files: ['test/**/*.html']
+      files: ['test/**/jquery.backtotop.html']
     },
     jshint: {
       gruntfile: {
@@ -176,5 +176,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist', [ 'dist-css', 'copy:fonts']);
   // Default task.
   grunt.registerTask('default', ['jshint', 'qunit', 'clean', 'concat', 'dist' , 'uglify']);
+
+  grunt.registerTask('test', ['qunit']);
 
 };
