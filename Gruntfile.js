@@ -52,10 +52,15 @@ module.exports = function(grunt) {
             },
             src: '<%= concat.bootstrap.dest %>',
             dest: 'dist/js/bootstrap.min.js'
+        },
+        dist: {
+            files: {
+                'dist/js/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+            }
         }
     },
     qunit: {
-      files: ['test/**/jquery.backtotop.html']
+      files: ['test/**/*.html']
     },
     jshint: {
       gruntfile: {
