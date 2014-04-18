@@ -65,7 +65,7 @@
 
     outline: none;
 }
-#upBtn button
+#upBtn
 {
     z-index: 10001;
 
@@ -97,17 +97,22 @@
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#969cb5', endColorstr='#6776b5', GradientType=0);
 }
-#upBtn button:before
+#upBtn:before
 {
-    font-size: 43px;
+    font-size: 34px;
 
     position: relative;
-    top: -3px;
-    right: 10px;
+    top: 7px;
+    right: 0;
     bottom: auto;
-    left: -8px;
+    left: 5px;
 
     opacity: .7;
     color: #fff;
+}
+#upBtn:hover,
+#upBtn:hover
+{
+    text-decoration: none;
 }
 /*# sourceMappingURL=bootstrap.css.map */

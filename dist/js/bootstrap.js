@@ -1,4 +1,4 @@
-/*! jQuery Backtotop - v0.1.0 - 2014-04-13
+/*! jQuery Backtotop - v0.1.0 - 2014-04-18
 * http://www.keepitnative.ch
 * Copyright (c) 2014 Peter Ruler; Licensed MIT */
 +function ($) {

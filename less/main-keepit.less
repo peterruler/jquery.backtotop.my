@@ -12,7 +12,7 @@
   display: block;
   z-index:10001;
 }
-#upBtn button {
+#upBtn {
   width:47px;
   height:47px;
   outline: none;
@@ -26,20 +26,24 @@
   background: -ms-linear-gradient(top,  #969cb5 0%,#828cb7 51%,#828cb7 51%,#6776b5 100%); /* IE10+ */
   background: linear-gradient(to bottom,  #969cb5 0%,#828cb7 51%,#828cb7 51%,#6776b5 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#969cb5', endColorstr='#6776b5',GradientType=0 ); /* IE6-8 */
-
   display: block;
   border-radius: 25px;
   opacity:0.7;
   z-index:10001;
 }
-#upBtn button:before {
+
+#upBtn:before {
   position: relative;
   color: #fff;
-  left: -8px;
-  font-size: 43px;
-  top: -3px;
-  right: 10px;
+  left: 5px;
+  font-size: 34px;
+  top: 7px;
+  right: 0;
   bottom: auto;
   opacity: .7;
+}
+
+#upBtn:hover, #upBtn:hover {
+  text-decoration: none;
 }
 
